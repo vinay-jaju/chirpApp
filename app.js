@@ -26,10 +26,11 @@ app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
+
+var random= (Math.random(1)*1e17).toString(16) + (Date.now()).toString(16);
+
 app.use(logger('dev'));
-app.use(session({
-  secret: 'keyboard cat'
-}));
+app.use(session({ secret: random }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -41,6 +42,8 @@ app.use(passport.session());
 app.use('/', index);
 app.use('/api', api);
 app.use('/auth', authenticate);
+
+require('./routes/profile')(app,models);
 
 //// Initialize Passport
 var initPassport = require('./passport-init');

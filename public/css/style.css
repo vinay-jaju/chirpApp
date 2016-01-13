@@ -1,0 +1,194 @@
+.row {
+  float: left;
+  width: 100%; }
+  .row .col {
+    float: left; }
+    .row .col-1 {
+      width: 8.33333%; }
+    .row .col-2 {
+      width: 16.66667%; }
+    .row .col-3 {
+      width: 25%; }
+    .row .col-4 {
+      width: 33.33333%; }
+    .row .col-5 {
+      width: 41.66667%; }
+    .row .col-6 {
+      width: 50%; }
+    .row .col-7 {
+      width: 58.33333%; }
+    .row .col-8 {
+      width: 66.66667%; }
+    .row .col-9 {
+      width: 75%; }
+    .row .col-10 {
+      width: 83.33333%; }
+    .row .col-11 {
+      width: 91.66667%; }
+    .row .col-12 {
+      width: 100%; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* html .clearfix {
+  zoom: 1; }
+
+*:first-child + html .clearfix {
+  zoom: 1; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+:root {
+  font-size: 16px; }
+
+* {
+  box-sizing: border-box;
+  color: #555;
+  font-size: 1em;
+  font-family: "Helvetica", "sans-serif", "Arial"; }
+  *::after, *::before {
+    content: " "; }
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer; }
+
+a {
+  text-decoration: none; }
+  a:link {
+    color: #262B35; }
+
+header {
+  background-color: #262B35;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 30;
+  height: 60px;
+  border-bottom: 3px solid #FF375D; }
+
+.nav {
+  position: absolute;
+  top: 80px;
+  width: 250px;
+  right: 5px;
+  background-color: #262B35;
+  border-top: 3px solid #262B35;
+  z-index: 30;
+  transform: translateY(-20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out; }
+  .nav::after {
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 100%;
+    border: 15px solid transparent;
+    border-bottom-color: #262B35;
+    right: 20px; }
+  .nav *, .nav a {
+    color: #fff; }
+  .nav-btn {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    font-size: 2em;
+    color: #ddd;
+    transition: all 0.3s ease-in-out; }
+    .nav-btn.showing {
+      transform: rotate(180deg); }
+  .nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+    .nav ul li {
+      padding: 0;
+      margin: 0; }
+      .nav ul li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+        color: #ccc; }
+        .nav ul li a:hover {
+          background-color: rgba(255, 255, 255, 0.02); }
+        .nav ul li a::after {
+          background-color: rgba(255, 255, 255, 0.02);
+          width: 90%;
+          left: 50%;
+          margin-left: -45%;
+          height: 1px;
+          position: absolute;
+          bottom: 0; }
+      .nav ul li:last-child > a::after {
+        background-color: rgba(255, 255, 255, 0); }
+  .nav.showing {
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible; }
+
+.cover {
+  height: 600px;
+  position: relative;
+  background-color: #888;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center; }
+  .cover--human {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%; }
+    .cover--human--img {
+      margin-bottom: 30px;
+      border-radius: 50%;
+      padding: 10px;
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3); }
+      .cover--human--img img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #333; }
+    .cover--human--name {
+      font-size: 2.3em;
+      color: #fff;
+      text-shadow: 0 0 3px #000; }
+
+.options {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .options .col {
+    min-height: 80px;
+    text-align: center;
+    color: #eee;
+    padding: 10px; }
+  .options div {
+    text-align: center; }
+  .options--eye {
+    font-size: 1.7em;
+    color: #fff; }
+  .options--subtitle {
+    color: #eee; }
+
+/*# sourceMappingURL=style.css.map */

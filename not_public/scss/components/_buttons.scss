@@ -1,0 +1,22 @@
+button {
+	outline:none;
+	border:none;
+	background-color:transparent;
+	cursor:pointer;
+}
+
+a {
+	text-decoration: none;
+
+	&:link {
+		color:$th_dark;
+	}
+
+	// &:hover {
+	// 	color:$th_blue;
+	// }
+
+	// &:active, &:target {
+	// 	color:$th_pink;
+	// }
+}

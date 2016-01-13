@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Akshay Nair</title>
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body ng-app='profile' ng-controller='homeCtrl' data-user='<%= uname %>'>
+<% include ./partials/header %>
+<main>
+	<div class='cover' style='background-image:url("/images/<%= cover %>");'>
+		<div class='cover--human'>
+			<div class='cover--human--img'><img src='/images/<%= profile %>' /></div>
+			<div class='cover--human--name'>@<%= uname %></div>
+		</div>
+		<div class='options clearfix'>
+			<div class='row clearfix'>
+				<div class='col col-2'>
+					<div class='options--eye'>100</div>
+					<div class='options--subtitle'>Posts</div>
+				</div>
+				<div class='col col-2'>
+					<div class='options--eye'>100</div>
+					<div class='options--subtitle'>Posts</div>
+				</div>
+				<div class='col col-2'>
+					<div class='options--eye'>100</div>
+					<div class='options--subtitle'>Posts</div>
+				</div>
+				<div class='col col-2'>
+					<div class='options--eye'>100</div>
+					<div class='options--subtitle'>Posts</div>
+				</div>
+				<div class='col col-2'>
+					<div class='options--eye'>100</div>
+					<div class='options--subtitle'>Posts</div>
+				</div>
+				<div class='col col-2'>
+					<div class='options--eye'>100</div>
+					<div class='options--subtitle'>Posts</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+</main>
+<div class='wrapper' ui-view>
+	
+</div>
+
+<script src='/js/script.js'></script>
+</body>
+</html>
