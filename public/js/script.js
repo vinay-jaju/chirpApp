@@ -32933,12 +32933,21 @@ app.controller('homeCtrl', ["$scope", function ($scope) {
 	});
 }]);
 
+app.controller('postsCtrl', ['$scope', function ($scope) {
+	$scope.posts = [{
+		text: "Hello World. Its-a me Mario.",
+		user: "hello",
+		date: "12 Jan 2013"
+	}];
+}]);
+
 app.config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
 	$urlRouterProvider.otherwise('/');
 
 	$stateProvider.state('main', {
 		url: '/',
-		template: 'hello'
+		controller: 'postsCtrl',
+		templateUrl: '/parts/posts.html'
 	}).state('info', {
 		url: '/info',
 		template: 'Info'

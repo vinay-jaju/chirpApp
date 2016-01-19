@@ -22,13 +22,24 @@ app.controller('homeCtrl', ["$scope",($scope)=> {
 	});
 }]);
 
+app.controller('postsCtrl', ['$scope', ($scope)=> {
+	$scope.posts= [
+		{
+			text: "Hello World. Its-a me Mario.",
+			user: "hello",
+			date: "12 Jan 2013"
+		}
+	]
+}]);
+
 app.config(['$urlRouterProvider','$stateProvider', ($urlRouterProvider,$stateProvider)=> {
 	$urlRouterProvider.otherwise('/');
 
 	$stateProvider
 		.state('main', {
 			url: '/',
-			template: 'hello'
+			controller: 'postsCtrl',
+			templateUrl: '/parts/posts.html'
 		})
 		.state('info', {
 			url: '/info',

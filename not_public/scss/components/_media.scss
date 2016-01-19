@@ -1,0 +1,12 @@
+@media all and (max-width:1000px) {
+	.row:not(.no-collapse) {
+		padding:0 10px;
+		.col {
+			width:100%;
+		}
+	}
+
+	.hide-1000 {
+		display:none;
+	}
+}

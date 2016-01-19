@@ -3,48 +3,41 @@
 <head>
 <title>Akshay Nair</title>
 <link rel="stylesheet" type="text/css" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald:400,700" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Dosis:400,800">
 </head>
 <body ng-app='profile' ng-controller='homeCtrl' data-user='<%= uname %>'>
 <% include ./partials/header %>
 <main>
 	<div class='cover' style='background-image:url("/images/<%= cover %>");'>
 		<div class='cover--human'>
-			<div class='cover--human--img'><img src='/images/<%= profile %>' /></div>
+			<div class='cover--human--img'><img draggable='false' src='/images/<%= profile %>' /></div>
 			<div class='cover--human--name'>@<%= uname %></div>
 		</div>
 		<div class='options clearfix'>
-			<div class='row clearfix'>
-				<div class='col col-2'>
-					<div class='options--eye'>100</div>
-					<div class='options--subtitle'>Posts</div>
+			<div class='row clearfix no-collapse'>
+				<div class='col col-3'>
+					<div class='options--eye'><%= n_post %></div>
+					<div class='options--subtitle'>posts</div>
 				</div>
-				<div class='col col-2'>
-					<div class='options--eye'>100</div>
-					<div class='options--subtitle'>Posts</div>
+				<div class='col col-3'>
+					<div class='options--eye'><%= n_hearts %></div>
+					<div class='options--subtitle'>hearts</div>
 				</div>
-				<div class='col col-2'>
+				<div class='col col-3'>
 					<div class='options--eye'>100</div>
-					<div class='options--subtitle'>Posts</div>
+					<div class='options--subtitle'>posts</div>
 				</div>
-				<div class='col col-2'>
+				<div class='col col-3'>
 					<div class='options--eye'>100</div>
-					<div class='options--subtitle'>Posts</div>
+					<div class='options--subtitle'>posts</div>
 				</div>
-				<div class='col col-2'>
-					<div class='options--eye'>100</div>
-					<div class='options--subtitle'>Posts</div>
-				</div>
-				<div class='col col-2'>
-					<div class='options--eye'>100</div>
-					<div class='options--subtitle'>Posts</div>
 				</div>
 			</div>	
 		</div>
 	</div>
 </main>
-<div class='wrapper' ui-view>
-	
-</div>
+<div class='wrapper' ui-view></div>
 
 <script src='/js/script.js'></script>
 </body>

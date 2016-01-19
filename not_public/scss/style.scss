@@ -3,6 +3,7 @@
 @import './components/grid';
 @import './components/defaults';
 @import './components/buttons';
+@import './components/media';
 
 
 header {
@@ -164,6 +165,7 @@ header {
 
 	div {
 		text-align:center;
+		font-family:$font_alt;
 	}
 
 	&--eye {
@@ -175,3 +177,86 @@ header {
 		color:#eee;
 	}
 }
+
+.posts {
+	margin:50px auto;
+	min-width:200px;
+	max-width:900px;
+}
+
+.postato {
+	background-color:$th_dark;
+	padding:30px 20px 10px;
+	position:relative;
+	box-shadow:0 0 5px 1px rgba(0,0,0,.3);
+
+	* {
+		color:#fff;
+	}
+
+	&--text {
+		font-size:1.5em;
+		text-align: center;
+		padding:10px 0 30px;
+	}
+
+	&--user,&--date {
+		font-size:0.85em;
+		color:#ccc;
+		position:absolute;
+		top:0;
+	}
+
+	&--user {
+		left:0;
+
+		a {
+			color:$th_pink;
+		}
+	}
+
+	&--date {
+		right:0;
+	}
+
+	@keyframes ripple {
+		0% {
+			transform:scale(0);
+			opacity:0;
+		}
+		50% {
+			transform:scale(1);
+			opacity:0;
+		}
+		100% {
+			opacity:0;
+			transform:scale(0);
+			transition:all 0 linear;
+		}
+	}
+
+	&--controls {
+		padding-left:20px;
+
+		.ctrl-btn {
+			font-family:"Helvetica","sans-serif","Arial";
+			padding:5px;
+			font-size:1.1em;
+
+			&::after {
+				// animation:ripple 0.4s ease-in-out;
+				content:" ";
+				position:absolute;
+				top:0;
+				left:0;
+				border-radius: 50%;
+				width:60px;
+				height:60px;
+				background-color:$th_pink;
+				transform:scale(0);
+				opacity:0;
+			}
+		}
+	}
+}
+

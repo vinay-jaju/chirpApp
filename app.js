@@ -34,6 +34,9 @@ app.use(session({ secret: random }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+//for the session
+app.use(session({resave: false,saveUninitialized: true, secret:"topsecret"}));
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(passport.initialize());
 app.use(passport.session());

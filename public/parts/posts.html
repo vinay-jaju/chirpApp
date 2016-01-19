@@ -1,0 +1,32 @@
+<div class='posts clearfix'>
+	<div class='row clearfix'>
+		<div class='col col-3 hide-1000 tags'>
+			<div class='post-wrap'>
+				<div class='title'>Tags</div>
+				<ul>
+					<li><a href='#'>#hello</a></li>
+					<li><a href='#'>#killosama</a></li>
+					<li><a href='#'>#gobacksimon</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class='col col-9'>
+			<div class='post-wrap'>
+				<div class='all_posts'>
+					<div class='postato' ng-repeat='post in posts'>
+						<div class='postato--text' ng-bind='post.text'></div>
+						<div class='clearfix' style='position:relative;padding-bottom:30px;border-bottom:1px solid #888;'>
+							<div class='postato--user'>Posted by <a href='/u/{{post.user}}'>@{{post.user}}</a></div>
+							<div class='postato--date' ng-bind='post.date'></div>
+						</div>
+						<div class='postato--controls'>
+							<button class='ctrl-btn heart'>a</button>
+							<button class='ctrl-btn reply'>a</button>
+							<button class='ctrl-btn reply'>a</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
